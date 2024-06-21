@@ -6,7 +6,6 @@ import { Flip, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { getSession } from "@/lib/actions";
 import { redirect } from "next/navigation";
-import "../globals.css";
 
 
 
