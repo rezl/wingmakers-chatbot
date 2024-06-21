@@ -138,7 +138,7 @@ export function AddNewChatbot() {
         <DialogHeader>
           <DialogTitle>Create a new chatbot</DialogTitle>
           <DialogDescription>
-            Create a new chatbot here. Click "create" when you're done.
+            Create a new chatbot here. Click &quot;create&quot; when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
