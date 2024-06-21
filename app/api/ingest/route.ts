@@ -9,13 +9,8 @@ import fs from 'fs';
 
 const filePath = 'data';
 
-
 export async function POST(request: NextRequest) {
     try {
-
-      if (!fs.existsSync(filePath)) {
-        fs.mkdirSync(filePath, { recursive: true });
-    }
 
       /*load raw docs from the all files in the directory */
       const directoryLoader = new DirectoryLoader(filePath, {

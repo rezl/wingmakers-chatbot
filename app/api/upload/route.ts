@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { FaS } from 'react-icons/fa6';
 
 export async function POST(request: NextRequest) {
   const data = await request.formData();
@@ -10,10 +11,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });
   }
 
+  const uploadFolder = 'data'
+
+  if (!await fs.access(uploadFolder).then(() => true).catch(() => false)) {
+    await fs.mkdir(uploadFolder, { recursive: true });
+  }
+
   const arrayBuffer = await file.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
 
-  const uploadDir = path.join(process.cwd(), 'data');
+  const uploadDir = path.join(process.cwd(), uploadFolder);
   const filePath = path.join(uploadDir, file.name);
 
   try {
