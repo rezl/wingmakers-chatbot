@@ -89,7 +89,7 @@ export default function Chatbots() {
       <div className="flex flex-wrap gap-4 overflow-y-scroll scrollbar-hide h-[500px] mt-4">
         {filteredChatbots.map((bot, index) => (
           <a
-            href={`/main/chatbots/${bot.chatbot_name}`}
+            href={`/chatbots/${bot.chatbot_name}`}
             key={index}
             className="flex-grow min-w-[150px] max-w-[200px]"
           >
