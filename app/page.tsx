@@ -1,4 +1,4 @@
-import { changePremium, changeUsername, getSession } from "@/lib/actions";
+import { getSession } from "@/lib/actions";
 import { redirect } from "next/navigation";
 
 const ProfilePage = async () => {
