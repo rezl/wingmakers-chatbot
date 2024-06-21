@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Chat Button</title>
+    <style>
+        .chat-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        /* background-color: #000000; */
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+      
+      .chat-popup {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 350px;
+        height: 500px;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        background-color: white;
+      }
+      
+      .chat-popup iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+      }
+    
+      .chat-popup .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: #000000;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .chatbot-icon {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+    </head>
+    <body>
+    
+    <button class="chat-button" onclick="toggleChatPopup()">
+        <img src=https://kczizdraiugjxeacnafr.supabase.co/storage/v1/object/public/icons/public/chatbot-1_technology_13633985.png class="chatbot-icon" />
+      </button>
+    
+    <div class="chat-popup" id="chatPopup">
+      <button class="close-btn" onclick="toggleChatPopup()">×</button>
+      <iframe src=http://localhost:3000/preview/chatbot-1 id="chatFrame"></iframe>
+    </div>
+    
+    <script>
+      function toggleChatPopup() {
+        var popup = document.getElementById('chatPopup');
+        if (popup.style.display === 'none' || popup.style.display === '') {
+          popup.style.display = 'block';
+        } else {
+          popup.style.display = 'none';
+        }
+      }
+    </script>
+    
+    </body>
+    </html>
+    
