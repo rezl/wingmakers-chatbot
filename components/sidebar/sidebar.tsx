@@ -34,9 +34,8 @@ export function Sidebar() {
         >
           <TabsList className="flex flex-col w-full space-y-2">
             {tabItems.map((tab) => (
-            <Link href={`/main/${tab.value}`} className="w-full">
+            <Link href={`/main/${tab.value}`} className="w-full" key={tab.value}>
             <TabsTrigger
-              key={tab.value}
               value={tab.value}
               className={
                 pathName.includes(`${tab.value}`) 
@@ -53,10 +52,6 @@ export function Sidebar() {
         </Tabs>
       </div>
       <div className="mt-auto border-t border-black dark:border-white pt-2">
-        {/* <Button className="w-full border-none font-medium flex justify-between items-center rounded-md hover:bg-background" variant={"ghost"}>
-            <span>Logout</span>
-            <MdOutlineLogout className="h-5 w-5"/>
-        </Button> */}
         <LogoutForm/>
       </div>
     </div>
