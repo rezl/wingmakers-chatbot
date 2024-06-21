@@ -60,7 +60,7 @@ export const login = async (
   session.isLoggedIn = true;
 
   await session.save();
-  redirect("/main/dashboard");
+  redirect("/dashboard");
 };
 
 export const logout = async () => {

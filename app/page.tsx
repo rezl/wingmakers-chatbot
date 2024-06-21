@@ -8,7 +8,7 @@ const ProfilePage = async () => {
     redirect("/login")
   }
 
-  redirect("/main/dashboard")
+  redirect("/dashboard")
  
 };
 

@@ -34,7 +34,7 @@ export function Sidebar() {
         >
           <TabsList className="flex flex-col w-full space-y-2">
             {tabItems.map((tab) => (
-            <Link href={`/main/${tab.value}`} className="w-full" key={tab.value}>
+            <Link href={`/${tab.value}`} className="w-full" key={tab.value}>
             <TabsTrigger
               value={tab.value}
               className={
