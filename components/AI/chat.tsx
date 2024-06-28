@@ -24,7 +24,7 @@ export const Chat: NextPage<Props> = ({ chatbotname }) => {
     {
       role: "assistant",
       id: "0",
-      content:'Hello!!! How can I help you today?',
+      content:'Hello! I\'m a Chat-GPT AI agent specific to James Mahu\'s various writings. How can I help you today?',
       createdAt: new Date(),
     },
   ];
